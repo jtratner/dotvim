@@ -1,0 +1,162 @@
+# shows your entire undo history and allows you to browse
+# through it easily, including branches, etc
+git://github.com/sjl/gundo.vim.git
+
+# fuzzy file, buffer, mru and tag finder
+git://github.com/kien/ctrlp.vim.git
+
+
+# General syntax checking
+# syntax checking for many filetypes
+git://github.com/scrooloose/syntastic.git
+
+git://github.com/itspriddle/vim-jquery.git
+
+# Convert markup language to HTML
+git://github.com/matthias-guenther/hammer.vim.git
+
+
+# allows compatible vim plugins to repeat themselves
+git://github.com/tpope/vim-repeat.git
+
+# some useful default mappings
+git://github.com/tpope/unimpaired.git
+
+# |Display|/browse # pimp your status bar
+
+# make your status line more useful (use a
+# patched font too
+git://github.com/Lokaltog/vim-powerline.git
+
+# show your open buffers
+git://github.com/sontek/minibufexpl.git
+
+# visualize your file
+git://github.com/scrooloose/nerdtree.git
+
+# great outliner of any file type
+git://github.com/vim-scripts/VOoM.git
+
+# show ctags in file browser
+git://github.com/majutsushi/tagbar.git
+
+git://github.com/vim-scripts/taglist.vim.git
+
+# |Formatting|/Indents/Copy/Paste
+# ---------------------------------
+
+# Incredibly useful, this whole page didn't look
+# formatted at first. A few commands, *boom* everything is lined up.
+git://github.com/godlygeek/tabular.git
+
+# lets you add/remove enclosing parens/tags/etc very
+# easily
+git://github.com/tpope/vim-surround.git
+
+# smart indent/unindent/formatting etc with paste.
+# You probably won't even notice it's there, you'll just appreciate that it worked
+# right :)
+git://github.com/sickill/vim-pasta.git
+
+# easy commenting/uncommenting of lines - you may
+# or may not want this. Much of it is as easy to do with simple commands
+git://github.com/tomtom/tcomment_vim.git
+
+# similar to tcomment, but simpler and easier to remmember
+git://github.com/tpope/vim-commentary.git
+
+# |Smart-todos|
+# -------------
+
+
+# lets you call up quickfix with all the todos
+# listed in your file
+git://github.com/vim-scripts/TaskList.git
+
+# |Search|                   # search comes in many forms and ways, you may not want all, but at
+                           # least try some
+
+# Note: requires install with rake in the directory + ruby (may want to use ctrl-p instead
+git://github.com/wincent/Command-T.git
+
+# ack search, try it and see if you like it
+git://github.com/mileszs/ack.vim.git
+
+# |git|/Github  # handle your version control like the pro that you are
+
+# Many useful Git integration features
+git://github.com/tpope/vim-fugitive.git
+# a number of handy git functions + syntax highlighting etc
+git://github.com/tpope/vim-git.git
+
+# gitk within vim -- useful and definitely worth a try
+git://github.com/gregsexton/gitv.git
+
+# post Gists right to Github
+git://github.com/mattn/gist-vim.git
+
+# dependency for gist-vim
+# MISSING:git syntax highlighting
+git://github.com/mattn/webapi-vim.git
+
+# |Snippets+Completions|
+
+# also check out neocomplcache if you like
+git://github.com/garbas/snipmate.git
+
+# repo of snippet files. Many languages, useful.
+git://github.com/honza/snipmate-snippets.git
+
+# required for snipmate
+git://github.com/MarcWeber/addon-mw-utils.git
+git://github.com/tomtom/tlib_vim.git
+
+# better tab completion, etc
+git://github.com/ervandew/supertab.git
+
+# pops up autocompletion at appropriate spots
+git://github.com/vim-scripts/AutoComplPop.git
+
+# |Python|
+# check your python code for style. Helps you be readable.
+git://github.com/nvie/vim-flake8.git
+
+git://github.com/nvie/vim-pyunit.git
+# access pydoc + docs while writing python scripts
+git://github.com/fs111/pydoc.vim.git
+
+# auto syntax check-as-you-type
+git://github.com/mitechie/pyflakes-pathogen.git
+
+# ipython-vim connection -- makes it easy to run
+# files in IPython + adds some nice completion and
+# popup features (including showing functions
+# directly as you type
+git://github.com/ivanov/vim-ipython.git
+
+# I used to use this, but it's a bit unwieldy if you
+# don't have a huge project/use many projects at once
+git://github.com/sontek/rope-vim.git
+
+# better python syntax highlighting
+git://github.com/sorin-ionescu/python.vim.git
+
+# Javascipt
+# still testing
+git://github.com/pangloss/vim-javascript.git
+
+# Other, minor plugins
+
+# lets you use <F12> to change focus between terminal and vim
+git://github.com/nvie/vim-togglemouse.git
+
+
+# General syntax highlighting
+git://github.com/vim-scripts/octave.vim--.git
+
+# Bundles from sontek's dotfiles that I don't currently use
+# Bundle 'alfredodeza/pytest.vim' # test python files
+# Bundle 'reinh/makegreen' # compiler
+# Bundle 'chrisbra/NrrwRgn' # focus on specific regions
+# Modular vimrc
+
