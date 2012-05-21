@@ -16,13 +16,22 @@ let mapleader=","             " change the leader to be a comma vs slash
 " Faster! Smarter! Woo!
 nnoremap ; :
 
+" Centralize backups, swapfiles and undo historu
+"set undofile "uncomment to add centralized undo files (not supported by all
+"versions of vim
+set backupdir=~/.dotfiles/vim/vim.symlink/backups//
+set directory=~/.dotfiles/vim/vim.symlink/swaps//
+if exists("&undodir")
+    " this is especially neat, because it lets you have undo persistence
+    set undodir=$~/.dotfiles/vim/vim.symlink/swaps//
+endif
+
 " Seriously, guys. It's not like :W is bound to anything anyway.
 command! W :w
 
 
 " Paste from clipboard
 map <leader>p "+p
-
 map <leader>y "+y
 
 " Quit window on <leader>q
@@ -251,13 +260,11 @@ let g:DefaultFont=g:UMono
 
 function! SetFont(size, ...)
     if a:0 > 0                  "a:0 is defined as number of *extra* arguments
-        echo g:{a:1}
         let fontface=g:{a:1}
     else
         let fontface=g:DefaultFont
     endif
     let newfont=fontface.":h".a:size
-    :echo newfont
     :exe ":set guifont=".newfont
 endfunction
 
@@ -267,17 +274,20 @@ if has("gui_running")
     " keep menubar only
     set guioptions=m
     set novisualbell
-    " set powerline to fancy
-    let g:Powerline_symbols="fancy"
+    " uncomment this line to set powerline to fancy -- make sure you have a
+    " patched font first
+    "let g:Powerline_symbols="fancy"
 else
     " set powerline to normal instead (otherwise superugly)
     colorscheme xoria256
 endif
 
-if has("gui_macvim")
+if has("gui_macvim") && !exists("g:MacVimSettingsLoaded")
+    let g:MacVimSettingsLoaded = 1
     colorscheme xoria256
-    call SetFont(20,"Inconsolata")
-    let g:Powerline_symbols="fancy"
+    "call SetFont(25,"UMono")
+    " again, you can uncomment for fancy settings
+    "let g:Powerline_symbols="fancy"
 endif
 
 " =================
@@ -298,7 +308,6 @@ let g:acp_behaviorKeywordLength = 4 " make AutoComplPop a little less
 " =============================================
 
 " make it easier to write git commands :P
-cabbrev git Git
 command! -nargs=* MyGitv call MyGitv(<f-args>)
 
 " check out :help gitv-misc for more info

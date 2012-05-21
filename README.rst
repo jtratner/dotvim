@@ -2,6 +2,10 @@
 jtratner's dotvim
 ==================
 
+
+.. contents:: Contents of the README
+    :depth: 2
+
 These are my dotvim files. I separated them out from `my dotfiles`_ because I
 wanted to be able to offer them individually (and, more specifically, to share
 them with my *Machine Learning* class on Coursera :) ). Octave is baked right
@@ -48,8 +52,6 @@ get them `in the fonts folder of my dotfiles`_
 .. _in the fonts folder of my dotfiles : https://github.com/jtratner/dotfiles/tree/master/fonts/fonts.symlink/ubuntu-mono-powerline
 
 
-.. contents:: What's In This Readme
-    :depth: 2
 
 
 
@@ -96,18 +98,18 @@ productive.
 | ``v``        | lets you select text (use ``<Esc>`` or ``:`` to get out of selection mode)                                                |
 +--------------+---------------------------------------------------------------------------------------------------------------------------+
 
-For more on Vim, I suggest you check out `this Vim cheat sheet` and/or
+For more on Vim, I suggest you check out `this Vim cheat sheet`_ and/or
 run ``vimtutor`` (``:help vimtutor`` for more).
 
 .. _this Vim cheat sheet : http://www.fsckin.com/wp-content/uploads/2007/10/vi-vim_cheat_sheet.gif
 
 Using vim with Octave
----------------------
+=====================
 
 There are a few things you might like to do with Octave files. 
 
 Use Octave highlighting
-"""""""""""""""""""""""
+-----------------------
 
 Vim defaults to ``matlab`` filetype for ``.m`` files, which is fine, but
 doesn't highlight everything correctly. Instead, you can set Octave syntax
@@ -120,7 +122,7 @@ If you want to set this permanently, add this to your ``vimrc``::
     autocmd BufNewFile, BufRead *.m setlocal ft=octave
 
 Add ``;`` to a bunch of lines
-"""""""""""""""""""""""""""""
+-----------------------------
 
 
 To add a ``;`` to the end of every line that doesn't have one, you can
@@ -131,7 +133,7 @@ highlight the lines you want with ``v``, type ``:`` and then use this substituti
 
 
 Comment and uncomment lines
-"""""""""""""""""""""""""""
+---------------------------
 
 To comment out a set of lines, again highlight them with ``v``, type ``:`` and
 use this simple subsituttion::
@@ -143,7 +145,7 @@ And to uncomment::
     :'<,'>s/^%//
 
 Search for a term
-"""""""""""""""""
+-----------------
 
 You can find any particular line of text by typing ``/`` in "command mode"
 (that's the default mode, press ``<Esc>`` while typing to get to it). For
