@@ -51,8 +51,39 @@ get them `in the fonts folder of my dotfiles`_
 
 .. _in the fonts folder of my dotfiles : https://github.com/jtratner/dotfiles/tree/master/fonts/fonts.symlink/ubuntu-mono-powerline
 
+Installing vim itself
+=====================
 
+Windows
+-------
 
+You can `download a binary from the vim website`_. (Grab the self-installing
+executable and make things easy).
+
+.. _download a binary from the vim website : http://www.vim.org/download.php#pc
+
+Mac
+---
+
+Install `MacVim`_, works (and integrates) very well.
+
+.. _MacVim : http://code.google.com/p/macvim/
+
+Ubuntu/Debian
+-------------
+
+``vim-gnome`` is pretty good::
+
+    ``sudo apt-get install vim-gnome``
+
+Lubuntu/other
+-------------
+
+You could install a Debian gui-version; however, it might mean installing a
+whole bunch of other dependencies, I'd compile it from source (not super
+hard)!  `Email me`_ and I can send you an install script.
+
+Check out `my dotfiles`_ for more.
 
 
 Learning vim
