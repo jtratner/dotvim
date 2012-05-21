@@ -1,6 +1,18 @@
 #!/usr/bin/env bash
 # setup from sontek's great dotfiles
 
+function backup_rename {
+
+    if [ -e "$HOME/${1}" ];
+    then
+        backup_rename "$1.bak";
+    else
+        echo "Backing up ${target##*/} to ${1}"
+        cp -rP $target "$HOME/${1}"
+        rm -r $target
+    fi
+}
+
 echo "Installing symlinks"
 function link_file {
     source="${PWD}/$1"
@@ -8,10 +20,9 @@ function link_file {
     target="${HOME}/.${base/\.symlink/}"
 
     if [ -e "${target}" ]; then
-        echo "Backing up ${target##*/} to ${target##*/}.bak"
-        mv $target $target.bak
-    fi
+        backup_rename "${target##*/}.bak"
 
+    fi
     ln -sf ${source} ${target}
 }
 
@@ -37,10 +48,10 @@ for i in *.symlink
 done
 echo "Updating submodules"
 
-git submodule sync
-git submodule init
-git submodule update
-git submodule foreach git pull origin master
-git submodule foreach git submodule init
-git submodule foreach git submodule update
-
+# git submodule sync
+# git submodule init
+# git submodule update
+# git submodule foreach git pull origin master
+# git submodule foreach git submodule init
+# git submodule foreach git submodule update
+# 
