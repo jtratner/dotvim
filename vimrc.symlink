@@ -17,8 +17,7 @@ let mapleader=","             " change the leader to be a comma vs slash
 nnoremap ; :
 
 " Centralize backups, swapfiles and undo historu
-"set undofile "uncomment to add centralized undo files (not supported by all
-"versions of vim
+set undofile
 set backupdir=~/.dotfiles/vim/vim.symlink/backups//
 set directory=~/.dotfiles/vim/vim.symlink/swaps//
 if exists("&undodir")
@@ -274,9 +273,8 @@ if has("gui_running")
     " keep menubar only
     set guioptions=m
     set novisualbell
-    " uncomment this line to set powerline to fancy -- make sure you have a
-    " patched font first
-    "let g:Powerline_symbols="fancy"
+    " set powerline to fancy
+    let g:Powerline_symbols="fancy"
 else
     " set powerline to normal instead (otherwise superugly)
     colorscheme xoria256
@@ -285,9 +283,8 @@ endif
 if has("gui_macvim") && !exists("g:MacVimSettingsLoaded")
     let g:MacVimSettingsLoaded = 1
     colorscheme xoria256
-    "call SetFont(25,"UMono")
-    " again, you can uncomment for fancy settings
-    "let g:Powerline_symbols="fancy"
+    call SetFont(25,"UMono")
+    let g:Powerline_symbols="fancy"
 endif
 
 " =================
@@ -588,9 +585,6 @@ augroup makohtml
     au!
     autocmd BufNewFile,BufRead *.mako,*.mak,*.jinja2 setlocal ft=html
     autocmd FileType html,xhtml,xml,css setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
-    autocmd FileType html set omnifunc=htmlcompletion#CompleteTags
-    autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-    autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 augroup END
 
 
